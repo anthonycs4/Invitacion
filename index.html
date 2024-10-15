@@ -38,6 +38,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       z-index: 10;
+      max-width: 80%;
     }
 
     h1 {
@@ -71,10 +72,51 @@
       background-color: #f06292; /* Hover en un rosado más vibrante */
     }
 
+    /* Efecto fade in */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Media Queries para hacerlo responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+
+      .button {
+        padding: 12px 25px;
+        font-size: 1em;
+      }
+
+      .container {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 425px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+
+      .container {
+        padding: 30px;
+      }
+    }
+
   </style>
 </head>
 <body>
